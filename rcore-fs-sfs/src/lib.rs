@@ -1020,7 +1020,7 @@ impl BitsetAlloc for BitVec<u8, Lsb0> {
 
 impl AsBuf for BitVec<u8, Lsb0> {
     fn as_buf(&self) -> &[u8] {
-        self.domain().region().unwrap().1
+        self.as_raw_slice()
     }
     fn as_buf_mut(&mut self) -> &mut [u8] {
         self.as_raw_mut_slice()
